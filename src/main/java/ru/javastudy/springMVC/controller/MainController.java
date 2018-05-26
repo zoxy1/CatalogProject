@@ -1,19 +1,11 @@
 package ru.javastudy.springMVC.controller;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import ru.javastudy.springMVC.dao.entities.OrganizationsEntity;
 import ru.javastudy.springMVC.model.InsuranceCompany;
-import ru.javastudy.springMVC.service.OrganizationsService;
-import ru.javastudy.springMVC.service.impl.HibernateSessionFactoryImpl;
-import ru.javastudy.springMVC.service.impl.OrganizationsServiceImpl;
 
 
 @Controller

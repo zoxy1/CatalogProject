@@ -1,38 +1,35 @@
 package ru.javastudy.springMVC.service.impl;
 
-import org.osgi.service.component.annotations.Component;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import ru.javastudy.springMVC.dao.entities.OrganizationsEntity;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import ru.javastudy.springMVC.dao.entities.OrganizationsEntity;
 import ru.javastudy.springMVC.dao.repository.OrganizationRepository;
 import ru.javastudy.springMVC.service.OrganizationsService;
 
-import java.util.List;
-@Service
-public class OrganizationsServiceImpl implements OrganizationsService {
+import java.util.ArrayList;
 
+import java.util.List;
+
+@Service("jpaOrganizationsService")
+@Repository
+@Transactional
+public class OrganizationsServiceImpl implements OrganizationsService {
     @Autowired
     private OrganizationRepository organizationRepository;
 
-    public Boolean add(OrganizationsEntity entity) {
-        organizationRepository.saveAndFlush(entity);
-        return true;
+
+    public List<OrganizationsEntity> findAll() {
+        return new ArrayList<OrganizationsEntity>(organizationRepository.findAll());
     }
 
-    public void delete(long id) {
-
+    public List<OrganizationsEntity> findByName(String Name) {
+        return organizationRepository.findByName(Name);
     }
 
-    public OrganizationsEntity getByName(String name) {
-        return null;
-    }
-
-    public OrganizationsEntity editBank(OrganizationsEntity entity) {
-        return null;
-    }
-
-    public List<OrganizationsEntity> getAll() {
+    public List<OrganizationsEntity> findByFirstNameAndLastName(String firstName, String lastName) {
         return null;
     }
 }

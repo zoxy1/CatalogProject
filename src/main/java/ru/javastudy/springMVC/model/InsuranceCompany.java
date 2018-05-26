@@ -1,7 +1,6 @@
 package ru.javastudy.springMVC.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import ru.javastudy.springMVC.service.impl.HibernateSessionFactoryImpl;
+
 
 public class InsuranceCompany {
     private String INN;
