@@ -12,8 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import ru.javastudy.springMVC.dao.entities.OrganizationsEntity;
 import ru.javastudy.springMVC.model.InsuranceCompany;
 import ru.javastudy.springMVC.service.OrganizationsService;
-import ru.javastudy.springMVC.service.impl.HibernateSessionFactoryImpl;
-import ru.javastudy.springMVC.service.impl.OrganizationsServiceImpl;
+
 
 
 @Controller

@@ -1,6 +1,6 @@
 package ru.javastudy.springMVC.service.impl;
 
-import org.hibernate.Incubating;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
