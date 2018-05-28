@@ -4,14 +4,18 @@
     <title>Сохранение в базу</title>
 </head>
 
-Добавлено в базу
+Добавлено в базу:
 <br/>
-<tr>
-    <tr>Название: ${organizationJSP.nameOrg};<br/>
-    <tr>ИНН: ${organizationJSP.inn};<td/><br/>
-    <td>ОГРН: ${organizationJSP.ogrn};</td><br/>
-    <td>Адрес: ${organizationJSP.address};</td><br/>
-</tr>
+<table>
+        <tr>Название: ${organizationJSP.nameOrg}<tr/>
+        <br/>
+        <tr>ИНН: ${organizationJSP.inn}<tr/>
+        <br/>
+        <tr>ОГРН: ${organizationJSP.ogrn}</tr>
+        <br/>
+        <tr>Адрес: ${organizationJSP.address}</tr>
+</table>
+<br/>
 <div>
     <button onclick="location.href='/'">Назад</button>
 </div>

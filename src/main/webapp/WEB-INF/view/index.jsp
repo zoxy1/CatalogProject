@@ -10,10 +10,16 @@
 <body>
 <spring:form method="post" modelAttribute="organizationJSP" action="save">
     Введите данные страховой организации для записи в БД:<br/>
-    Имя: <spring:input path="nameOrg"/> <br/>
-    ИНН: <spring:input path="inn"/> <br/>
-    ОГРН: <spring:input path="ogrn"/> <br/>
-    Адрес: <spring:input path="address"/> <br/>
+<table>
+        <tr>Имя: <spring:input path="nameOrg"/> </tr>
+        <br/>
+        <tr>ИНН: <spring:input path="inn"/> </tr>
+        <br/>
+        <tr>ОГРН: <spring:input path="ogrn"/> </tr>
+        <br/>
+        <tr>Адрес: <spring:input path="address"/> </tr>
+        <br/>
+</table>
     <spring:button>Добавить</spring:button>
     <br/>
 </spring:form>

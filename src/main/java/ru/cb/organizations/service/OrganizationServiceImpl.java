@@ -18,9 +18,7 @@ public class OrganizationServiceImpl implements OrganizationService {
 
     @Override
     public Organization addOrganization(Organization organization) {
-
-        Organization saved = organizationRepository.saveAndFlush(organization);
-        return saved;
+        return  organizationRepository.saveAndFlush(organization);
     }
 
     @Override

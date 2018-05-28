@@ -8,10 +8,7 @@ public interface OrganizationService {
     Organization addOrganization(Organization organization);
 
     void delete(long id);
-
     List<Organization> getByString(String string);
-
     Organization editOrganization(Organization organization);
-
     List<Organization> getAll();
 }

@@ -41,6 +41,9 @@ public class MainController {
     public ModelAndView findOrganizations(@ModelAttribute("findParametersJSP") FindParametrs findParametrs) {
         ModelAndView modelAndView = new ModelAndView();
         List<Organization> organizations = organizationService.getByString(findParametrs.getString());
+        if(organizations.isEmpty()) {
+            organizations.add(new Organization("Записей не найдено!!!"));
+        }
         modelAndView.addObject("findJSP", organizations);
         modelAndView.setViewName("findOrganizations");
         return modelAndView;

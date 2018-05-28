@@ -14,6 +14,10 @@ public class Organization {
     public Organization() {
     }
 
+    public Organization(String nameOrg) {
+        this.nameOrg = nameOrg;
+    }
+
     @Id
     @Column(name = "id_org", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
